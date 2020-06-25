@@ -9,9 +9,8 @@ class PlainFlowController: FlowController {
     
     private let rootViewController: UIViewController
     
-    init(id: FlowIdentifier = .init(), viewController: UIViewController) {
+    init(viewController: UIViewController) {
         self.rootViewController = viewController
-        super.init(id: id)
     }
     
     override func start() -> UIViewController {

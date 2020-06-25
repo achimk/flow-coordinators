@@ -129,12 +129,12 @@
 		27E8525824A4EDEF00096194 /* FlowController */ = {
 			isa = PBXGroup;
 			children = (
+				27E8525C24A4EDEF00096194 /* Presenters */,
 				27E8525924A4EDEF00096194 /* FlowEvent.swift */,
 				27E8525A24A4EDEF00096194 /* FlowIdentifier.swift */,
-				27E8525B24A4EDEF00096194 /* NavigationStackFlowController.swift */,
-				27E8525C24A4EDEF00096194 /* Presenters */,
-				27E8525E24A4EDEF00096194 /* PlainFlowController.swift */,
 				27E8525F24A4EDEF00096194 /* FlowController.swift */,
+				27E8525E24A4EDEF00096194 /* PlainFlowController.swift */,
+				27E8525B24A4EDEF00096194 /* NavigationStackFlowController.swift */,
 			);
 			path = FlowController;
 			sourceTree = "<group>";

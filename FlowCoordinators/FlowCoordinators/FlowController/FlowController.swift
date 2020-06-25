@@ -9,7 +9,7 @@ import UIKit
 
 class FlowController {
     
-    let id: FlowIdentifier
+    let id: FlowIdentifier = .init()
     lazy var wireframe: (FlowEvent) -> () = prepareWireframe()
     lazy var viewController: UIViewController = {
         isViewControllerLoaded = true
@@ -20,12 +20,6 @@ class FlowController {
     private(set) weak var parent: FlowController?
     private var eventObservers: [String: AnyFlowEventHandler] = [:]
     private var eventHandlers: [String: AnyFlowEventHandler] = [:]
-
-    // MARK: Init
-    
-    init(id: FlowIdentifier = .init()) {
-        self.id = id
-    }
     
     // MARK: Start
     

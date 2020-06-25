@@ -468,7 +468,6 @@ fileprivate class AnyNavigationFlowController: NavigationFlowController {
     
     private init(flowController: FlowController) {
         self.flowController = flowController
-        super.init(id: flowController.id)
     }
     
     override func start() -> UIViewController {
