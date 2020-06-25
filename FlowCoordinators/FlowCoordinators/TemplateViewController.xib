@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemplateViewController" customModule="RxFun" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemplateViewController" customModule="FlowCoordinators" customModuleProvider="target">
             <connections>
                 <outlet property="backButtonSwitch" destination="q2g-PH-TuQ" id="CUt-yh-eAA"/>
                 <outlet property="dumpChainingButton" destination="dJP-yY-mUF" id="n7G-W3-2eH"/>
@@ -18,9 +18,9 @@
                 <outlet property="pushHeadButton" destination="pZx-Pg-2zM" id="tfB-gl-SpW"/>
                 <outlet property="rawViewControllerButton" destination="kGa-9f-L5R" id="Hei-gG-Jjb"/>
                 <outlet property="replaceCurrentBackwardButton" destination="cqa-n2-lYX" id="WOL-zG-j7C"/>
-                <outlet property="replaceCurrentForewardButton" destination="eSt-U6-LsB" id="8Bt-Gd-0MX"/>
+                <outlet property="replaceCurrentForwardButton" destination="eSt-U6-LsB" id="8Bt-Gd-0MX"/>
                 <outlet property="replaceHeadBackwardButton" destination="pXj-me-g0y" id="S9s-E7-BFp"/>
-                <outlet property="replaceHeadForewardButton" destination="hn7-aw-S4W" id="66V-AT-CT2"/>
+                <outlet property="replaceHeadForwardButton" destination="hn7-aw-S4W" id="66V-AT-CT2"/>
                 <outlet property="view" destination="iN0-l3-epB" id="qf2-jq-nS1"/>
             </connections>
         </placeholder>
@@ -82,7 +82,7 @@
                                     </constraints>
                                     <state key="normal" title="Replace Current Forward"/>
                                     <connections>
-                                        <action selector="replaceCurrentForeward" destination="-1" eventType="touchUpInside" id="Mjy-eV-qww"/>
+                                        <action selector="replaceCurrentForward" destination="-1" eventType="touchUpInside" id="Pk0-LJ-2TS"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-n2-lYX">
@@ -102,7 +102,7 @@
                                     </constraints>
                                     <state key="normal" title="Replace Root Forward"/>
                                     <connections>
-                                        <action selector="replaceHeadForeward" destination="-1" eventType="touchUpInside" id="dnE-4h-cd6"/>
+                                        <action selector="replaceHeadForward" destination="-1" eventType="touchUpInside" id="TAX-m0-KmL"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXj-me-g0y">

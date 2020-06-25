@@ -38,7 +38,7 @@ struct NavigationItemDescriptor {
 }
 
 enum NavigationAnimation {
-    case foreward
+    case forward
     case backward
     case none
 }
@@ -68,7 +68,7 @@ class NavigationPresenter: NSObject, UINavigationControllerDelegate, UINavigatio
         navigationController.interactivePopGestureRecognizer?.delegate = self
         
         switch animation {
-        case .foreward:
+        case .forward:
             if navigationController.viewControllers.isEmpty {
                 navigationController.viewControllers = viewControllers
             } else {

@@ -13,10 +13,10 @@ class TemplateViewController: UIViewController {
     @IBOutlet private weak var pushHeadButton: UIButton!
     @IBOutlet private weak var popHeadButton: UIButton!
     
-    @IBOutlet private weak var replaceCurrentForewardButton: UIButton!
+    @IBOutlet private weak var replaceCurrentForwardButton: UIButton!
     @IBOutlet private weak var replaceCurrentBackwardButton: UIButton!
     
-    @IBOutlet private weak var replaceHeadForewardButton: UIButton!
+    @IBOutlet private weak var replaceHeadForwardButton: UIButton!
     @IBOutlet private weak var replaceHeadBackwardButton: UIButton!
     
     @IBOutlet private weak var rawViewControllerButton: UIButton!
@@ -41,16 +41,16 @@ class TemplateViewController: UIViewController {
         popHeadHandler?()
     }
     
-    @IBAction func replaceCurrentForeward() {
-        replaceCurrentForewardHandler?()
+    @IBAction func replaceCurrentForward() {
+        replaceCurrentForwardHandler?()
     }
     
     @IBAction func replaceCurrentBackward() {
         replaceCurrentBackwardHandler?()
     }
     
-    @IBAction func replaceHeadForeward() {
-        replaceHeadForewardHandler?()
+    @IBAction func replaceHeadForward() {
+        replaceHeadForwardHandler?()
     }
     
     @IBAction func replaceHeadBackward() {
@@ -79,10 +79,10 @@ class TemplateViewController: UIViewController {
     var pushHeadHandler: (() -> ())?
     var popHeadHandler: (() -> ())?
     
-    var replaceCurrentForewardHandler: (() -> ())?
+    var replaceCurrentForwardHandler: (() -> ())?
     var replaceCurrentBackwardHandler: (() -> ())?
     
-    var replaceHeadForewardHandler: (() -> ())?
+    var replaceHeadForwardHandler: (() -> ())?
     var replaceHeadBackwardHandler: (() -> ())?
     
     var rawViewControllerHandler: (() -> ())?

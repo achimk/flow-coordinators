@@ -32,7 +32,7 @@ final class NavigationStackFlowController: FlowController {
             
             prepareParentChaining(for: flowControllers)
             let descriptor = prepareNavigationDescriptor(for: stack)
-            let animation: NavigationAnimation = animated ? .foreward : .none
+            let animation: NavigationAnimation = animated ? .forward : .none
             presenter.present(descriptor: descriptor, animation: animation, completion: completion)
         }
     }
@@ -44,7 +44,7 @@ final class NavigationStackFlowController: FlowController {
             
             prepareParentChaining(from: last ?? self, pushed: flowController)
             let descriptor = prepareNavigationDescriptor(for: stack)
-            let animation: NavigationAnimation = animated ? .foreward : .none
+            let animation: NavigationAnimation = animated ? .forward : .none
             presenter.present(descriptor: descriptor, animation: animation, completion: completion)
         }
     }
@@ -55,7 +55,7 @@ final class NavigationStackFlowController: FlowController {
             
             prepareParentChaining(from: source, pushed: flowController)
             let descriptor = prepareNavigationDescriptor(for: stack)
-            let animation: NavigationAnimation = animated ? .foreward : .none
+            let animation: NavigationAnimation = animated ? .forward : .none
             presenter.present(descriptor: descriptor, animation: animation, completion: completion)
         }
     }
@@ -80,14 +80,14 @@ final class NavigationStackFlowController: FlowController {
         }
     }
     
-    func replaceForeward(_ flowController: FlowController, with newFlowController: FlowController, animated: Bool = true, completion: (() -> ())? = nil) {
+    func replaceForward(_ flowController: FlowController, with newFlowController: FlowController, animated: Bool = true, completion: (() -> ())? = nil) {
         
         let sourceFlowController = flowController.parent ?? self
         stack.replace(flowController.toNavigationItem(self), with: newFlowController.toNavigationItem(self)) { (stack) in
             
             prepareParentChaining(from: sourceFlowController, replacedWith: newFlowController)
             let descriptor = prepareNavigationDescriptor(for: stack)
-            let animation: NavigationAnimation = animated ? .foreward : .none
+            let animation: NavigationAnimation = animated ? .forward : .none
             presenter.present(descriptor: descriptor, animation: animation, completion: completion)
         }
     }
@@ -442,11 +442,11 @@ class NavigationFlowController: FlowController {
     final func replace(with flowController: FlowController, animation: Animation = .push, completion: (() -> ())? = nil) {
         switch animation {
         case .push:
-            navigationStackFlowController?.replaceForeward(self, with: flowController, animated: true, completion: completion)
+            navigationStackFlowController?.replaceForward(self, with: flowController, animated: true, completion: completion)
         case .pop:
             navigationStackFlowController?.replaceBackward(self, with: flowController, animated: true, completion: completion)
         case .none:
-            navigationStackFlowController?.replaceForeward(self, with: flowController, animated: false, completion: completion)
+            navigationStackFlowController?.replaceForward(self, with: flowController, animated: false, completion: completion)
         }
     }
 }

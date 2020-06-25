@@ -8,7 +8,7 @@ import UIKit
 enum ViewWireframe: FlowEvent {
     case push
     case pop
-    case replaceForeward
+    case replaceForward
     case repalceBackward
 }
 
@@ -76,9 +76,9 @@ final class ViewFlowController: NavigationFlowController, CustomDebugStringConve
         viewController.popHandler = { [ weak self] in self?.presentPrevious() }
         viewController.pushHeadHandler = { [weak self] in self?.wireframe(ViewWireframe.push) }
         viewController.popHeadHandler = { [weak self] in self?.wireframe(ViewWireframe.pop) }
-        viewController.replaceCurrentForewardHandler = { [weak self] in self?.replaceCurrentForeward() }
+        viewController.replaceCurrentForwardHandler = { [weak self] in self?.replaceCurrentForward() }
         viewController.replaceCurrentBackwardHandler = { [weak self] in self?.replaceCurrentBackward() }
-        viewController.replaceHeadForewardHandler = { [weak self] in self?.wireframe(ViewWireframe.replaceForeward) }
+        viewController.replaceHeadForwardHandler = { [weak self] in self?.wireframe(ViewWireframe.replaceForward) }
         viewController.replaceHeadBackwardHandler = { [weak self] in self?.wireframe(ViewWireframe.repalceBackward) }
         viewController.rawViewControllerHandler = { [weak self] in self?.presentRawViewController() }
         viewController.dumpChainingHandler = { [weak self] in self?.dumpChaining() }
@@ -98,8 +98,8 @@ final class ViewFlowController: NavigationFlowController, CustomDebugStringConve
                 self?.presentNext()
             case .pop:
                 self?.presentCurrent()
-            case .replaceForeward:
-                self?.replaceCurrentForeward()
+            case .replaceForward:
+                self?.replaceCurrentForward()
             case .repalceBackward:
                 self?.replaceCurrentBackward()
             }
@@ -128,7 +128,7 @@ final class ViewFlowController: NavigationFlowController, CustomDebugStringConve
         popToCurrent(completion: { print("-> pop to flow controller completed:", index) })
     }
     
-    private func replaceCurrentForeward() {
+    private func replaceCurrentForward() {
         let flowController = createFlowController(isRoot: isRoot)
         let isRoot = flowController.isRoot
         let index = flowController.index
