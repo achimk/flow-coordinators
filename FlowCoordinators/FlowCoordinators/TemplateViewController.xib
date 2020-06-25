@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TemplateViewController" customModule="RxFun" customModuleProvider="target">
+            <connections>
+                <outlet property="backButtonSwitch" destination="q2g-PH-TuQ" id="CUt-yh-eAA"/>
+                <outlet property="dumpChainingButton" destination="dJP-yY-mUF" id="n7G-W3-2eH"/>
+                <outlet property="interactiveBackSwitch" destination="iJl-90-e5p" id="key-xS-ZeB"/>
+                <outlet property="popButton" destination="2v0-L4-JW3" id="P9v-8H-Ih2"/>
+                <outlet property="popHeadButton" destination="bA5-jU-PJR" id="L1Y-yd-jru"/>
+                <outlet property="pushButton" destination="JJ9-9c-7zT" id="zUf-Qc-Z5N"/>
+                <outlet property="pushHeadButton" destination="pZx-Pg-2zM" id="tfB-gl-SpW"/>
+                <outlet property="rawViewControllerButton" destination="kGa-9f-L5R" id="Hei-gG-Jjb"/>
+                <outlet property="replaceCurrentBackwardButton" destination="cqa-n2-lYX" id="WOL-zG-j7C"/>
+                <outlet property="replaceCurrentForewardButton" destination="eSt-U6-LsB" id="8Bt-Gd-0MX"/>
+                <outlet property="replaceHeadBackwardButton" destination="pXj-me-g0y" id="S9s-E7-BFp"/>
+                <outlet property="replaceHeadForewardButton" destination="hn7-aw-S4W" id="66V-AT-CT2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="qf2-jq-nS1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1s-Ne-ITV">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Tc3-Hc-nWL">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="726"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJ9-9c-7zT">
+                                    <rect key="frame" x="161.5" y="24" width="91" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="lj3-WY-MK6"/>
+                                    </constraints>
+                                    <state key="normal" title="Push Current"/>
+                                    <connections>
+                                        <action selector="push" destination="-1" eventType="touchUpInside" id="NTg-BA-tQ5"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2v0-L4-JW3">
+                                    <rect key="frame" x="165.5" y="84" width="83" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="Gay-K7-kNf"/>
+                                    </constraints>
+                                    <state key="normal" title="Pop Current"/>
+                                    <connections>
+                                        <action selector="pop" destination="-1" eventType="touchUpInside" id="j3O-1L-djC"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZx-Pg-2zM">
+                                    <rect key="frame" x="154" y="144" width="106" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="Ri8-5p-2Ox"/>
+                                    </constraints>
+                                    <state key="normal" title="Push from Root"/>
+                                    <connections>
+                                        <action selector="pushHead" destination="-1" eventType="touchUpInside" id="To3-3f-t15"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bA5-jU-PJR">
+                                    <rect key="frame" x="166.5" y="204" width="81" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="Nfp-h9-zvM"/>
+                                    </constraints>
+                                    <state key="normal" title="Pop to Root"/>
+                                    <connections>
+                                        <action selector="popHead" destination="-1" eventType="touchUpInside" id="Z3l-MI-UI7"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSt-U6-LsB">
+                                    <rect key="frame" x="121.5" y="264" width="171" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="j3L-hx-KOn"/>
+                                    </constraints>
+                                    <state key="normal" title="Replace Current Forward"/>
+                                    <connections>
+                                        <action selector="replaceCurrentForeward" destination="-1" eventType="touchUpInside" id="Mjy-eV-qww"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-n2-lYX">
+                                    <rect key="frame" x="116" y="324" width="182" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="3Vh-hb-HQo"/>
+                                    </constraints>
+                                    <state key="normal" title="Replace Current Backward"/>
+                                    <connections>
+                                        <action selector="replaceCurrentBackward" destination="-1" eventType="touchUpInside" id="Xty-x7-d0b"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn7-aw-S4W">
+                                    <rect key="frame" x="131.5" y="384" width="151" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="WtU-WR-Rtv"/>
+                                    </constraints>
+                                    <state key="normal" title="Replace Root Forward"/>
+                                    <connections>
+                                        <action selector="replaceHeadForeward" destination="-1" eventType="touchUpInside" id="dnE-4h-cd6"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXj-me-g0y">
+                                    <rect key="frame" x="126" y="444" width="162" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="dFy-71-wBX"/>
+                                    </constraints>
+                                    <state key="normal" title="Replace Root Backward"/>
+                                    <connections>
+                                        <action selector="replaceHeadBackward" destination="-1" eventType="touchUpInside" id="r11-pb-mSF"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGa-9f-L5R">
+                                    <rect key="frame" x="113.5" y="504" width="187" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="ax6-6l-mxF"/>
+                                    </constraints>
+                                    <state key="normal" title="Push Raw UIViewController"/>
+                                    <connections>
+                                        <action selector="rawViewController" destination="-1" eventType="touchUpInside" id="gHX-SQ-FdW"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJP-yY-mUF">
+                                    <rect key="frame" x="154.5" y="564" width="105" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="8iR-71-dEp"/>
+                                    </constraints>
+                                    <state key="normal" title="Dump Chaining"/>
+                                    <connections>
+                                        <action selector="dumpChaining" destination="-1" eventType="touchUpInside" id="hSB-j4-l2L"/>
+                                    </connections>
+                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="t8Q-nl-HQ5">
+                                    <rect key="frame" x="102" y="624" width="210" height="31"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Back Button Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gmb-3Z-9S0">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2g-PH-TuQ">
+                                            <rect key="frame" x="161" y="0.0" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="backButtonChanged" destination="-1" eventType="valueChanged" id="lI8-bV-zk7"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-ky-2Fj">
+                                    <rect key="frame" x="69" y="671" width="276.5" height="31"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interactive Transition Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGb-1i-Su2">
+                                            <rect key="frame" x="0.0" y="0.0" width="211.5" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJl-90-e5p">
+                                            <rect key="frame" x="227.5" y="0.0" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="interactiveBackChanged" destination="-1" eventType="valueChanged" id="uSS-EE-MTr"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <edgeInsets key="layoutMargins" top="24" left="24" bottom="24" right="24"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Tc3-Hc-nWL" firstAttribute="height" secondItem="Hn7-Rj-DQi" secondAttribute="height" priority="250" id="EiW-29-34y"/>
+                        <constraint firstItem="Tc3-Hc-nWL" firstAttribute="top" secondItem="KHE-B8-eKi" secondAttribute="top" id="WEN-xl-0dk"/>
+                        <constraint firstItem="Tc3-Hc-nWL" firstAttribute="bottom" secondItem="KHE-B8-eKi" secondAttribute="bottom" id="ZGs-EA-CZx"/>
+                        <constraint firstItem="Tc3-Hc-nWL" firstAttribute="leading" secondItem="KHE-B8-eKi" secondAttribute="leading" id="kfR-6s-NlC"/>
+                        <constraint firstItem="Tc3-Hc-nWL" firstAttribute="width" secondItem="Hn7-Rj-DQi" secondAttribute="width" id="wnp-GW-pGi"/>
+                        <constraint firstItem="Tc3-Hc-nWL" firstAttribute="trailing" secondItem="KHE-B8-eKi" secondAttribute="trailing" id="y9d-BC-2oe"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="KHE-B8-eKi"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Hn7-Rj-DQi"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="x1s-Ne-ITV" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="3bs-SH-CPx"/>
+                <constraint firstItem="x1s-Ne-ITV" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gxp-cS-GSl"/>
+                <constraint firstItem="x1s-Ne-ITV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="lL4-qO-SBy"/>
+                <constraint firstItem="x1s-Ne-ITV" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="qmA-D8-rLb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
+        </view>
+    </objects>
+</document>

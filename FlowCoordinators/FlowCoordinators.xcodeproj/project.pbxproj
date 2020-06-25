@@ -21,6 +21,9 @@
 		27E8526524A4EDEF00096194 /* NavigationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8525D24A4EDEF00096194 /* NavigationPresenter.swift */; };
 		27E8526624A4EDEF00096194 /* PlainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8525E24A4EDEF00096194 /* PlainFlowController.swift */; };
 		27E8526724A4EDEF00096194 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8525F24A4EDEF00096194 /* FlowController.swift */; };
+		27E8526B24A4EE8700096194 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8526824A4EE8700096194 /* TemplateViewController.swift */; };
+		27E8526C24A4EE8700096194 /* TemplateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E8526924A4EE8700096194 /* TemplateViewController.xib */; };
+		27E8526D24A4EE8700096194 /* ViewFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E8526A24A4EE8700096194 /* ViewFlowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		27E8525D24A4EDEF00096194 /* NavigationPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationPresenter.swift; sourceTree = "<group>"; };
 		27E8525E24A4EDEF00096194 /* PlainFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainFlowController.swift; sourceTree = "<group>"; };
 		27E8525F24A4EDEF00096194 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		27E8526824A4EE8700096194 /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
+		27E8526924A4EE8700096194 /* TemplateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TemplateViewController.xib; sourceTree = "<group>"; };
+		27E8526A24A4EE8700096194 /* ViewFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 				27E8525824A4EDEF00096194 /* FlowController */,
 				27E8525524A4EDEF00096194 /* ViewControllers */,
 				27E8523324A4EDB600096194 /* AppDelegate.swift */,
+				27E8526A24A4EE8700096194 /* ViewFlowController.swift */,
+				27E8526824A4EE8700096194 /* TemplateViewController.swift */,
+				27E8526924A4EE8700096194 /* TemplateViewController.xib */,
 				27E8523524A4EDB600096194 /* SceneDelegate.swift */,
 				27E8523924A4EDB600096194 /* Main.storyboard */,
 				27E8523C24A4EDB700096194 /* Assets.xcassets */,
@@ -227,6 +236,7 @@
 			files = (
 				27E8524024A4EDB700096194 /* LaunchScreen.storyboard in Resources */,
 				27E8523D24A4EDB700096194 /* Assets.xcassets in Resources */,
+				27E8526C24A4EE8700096194 /* TemplateViewController.xib in Resources */,
 				27E8523B24A4EDB600096194 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +260,8 @@
 				27E8526724A4EDEF00096194 /* FlowController.swift in Sources */,
 				27E8523424A4EDB600096194 /* AppDelegate.swift in Sources */,
 				27E8526324A4EDEF00096194 /* FlowIdentifier.swift in Sources */,
+				27E8526B24A4EE8700096194 /* TemplateViewController.swift in Sources */,
+				27E8526D24A4EE8700096194 /* ViewFlowController.swift in Sources */,
 				27E8526124A4EDEF00096194 /* NavigationController.swift in Sources */,
 				27E8526024A4EDEF00096194 /* ViewController.swift in Sources */,
 				27E8526224A4EDEF00096194 /* FlowEvent.swift in Sources */,
